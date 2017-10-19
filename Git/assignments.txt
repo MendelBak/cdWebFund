@@ -1,0 +1,158 @@
+Microsoft Windows [Version 10.0.15063]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\Mendel>dir
+ Volume in drive C is Windows7_OS
+ Volume Serial Number is 4E51-4C04
+
+ Directory of C:\Users\Mendel
+
+10/16/2017  04:04 PM    <DIR>          .
+10/16/2017  04:04 PM    <DIR>          ..
+10/15/2017  08:49 PM    <DIR>          .atom
+10/16/2017  04:04 PM             1,035 .bash_history
+10/16/2017  12:13 PM    <DIR>          .config
+01/16/2017  09:24 PM    <DIR>          .gnutls
+09/18/2017  10:57 PM    <DIR>          .idlerc
+10/15/2017  09:08 PM                 0 .node_repl_history
+09/18/2017  10:45 PM    <DIR>          .PyCharmCE2017.2
+09/26/2017  08:50 PM    <DIR>          .vscode
+10/10/2017  10:18 PM    <DIR>          Contacts
+10/16/2017  05:04 PM    <DIR>          Desktop
+10/11/2017  11:46 AM    <DIR>          Documents
+10/16/2017  08:07 AM    <DIR>          Downloads
+10/10/2017  10:18 PM    <DIR>          Favorites
+10/16/2017  11:59 AM    <DIR>          Google Drive
+10/10/2017  10:19 PM    <DIR>          Links
+10/10/2017  10:18 PM    <DIR>          Music
+10/16/2017  11:59 AM    <DIR>          OneDrive
+10/10/2017  10:18 PM    <DIR>          Pictures
+09/18/2017  10:57 PM    <DIR>          PycharmProjects
+10/10/2017  10:19 PM    <DIR>          Saved Games
+10/10/2017  10:18 PM    <DIR>          Searches
+11/21/2016  11:05 AM    <DIR>          Tracing
+10/10/2017  10:18 PM    <DIR>          Videos
+               2 File(s)          1,035 bytes
+              23 Dir(s)  373,296,353,280 bytes free
+
+C:\Users\Mendel>cd desktop
+
+C:\Users\Mendel\Desktop>md DojoAssignments
+
+C:\Users\Mendel\Desktop>cd dojoassignments
+
+C:\Users\Mendel\Desktop\DojoAssignments>md WebFundamentals
+
+C:\Users\Mendel\Desktop\DojoAssignments>md Python MEAN Ruby iOS netCore
+
+C:\Users\Mendel\Desktop\DojoAssignments>cd webfundamentals
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals>copy NUL about.txt
+        1 file(s) copied.
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals>cd ..
+
+C:\Users\Mendel\Desktop\DojoAssignments>cd python
+
+C:\Users\Mendel\Desktop\DojoAssignments\Python>copy NUL about.txt
+        1 file(s) copied.
+
+C:\Users\Mendel\Desktop\DojoAssignments\Python>cd ..
+
+C:\Users\Mendel\Desktop\DojoAssignments>cd mean
+
+C:\Users\Mendel\Desktop\DojoAssignments\MEAN>copy NUL about.txt
+        1 file(s) copied.
+
+C:\Users\Mendel\Desktop\DojoAssignments\MEAN>cd ..
+
+C:\Users\Mendel\Desktop\DojoAssignments>cd ruby
+
+C:\Users\Mendel\Desktop\DojoAssignments\Ruby>copy NUL about.txt
+        1 file(s) copied.
+
+C:\Users\Mendel\Desktop\DojoAssignments\Ruby>cd ..
+
+C:\Users\Mendel\Desktop\DojoAssignments>cd ios
+
+C:\Users\Mendel\Desktop\DojoAssignments\iOS>copy NUL about.txt
+        1 file(s) copied.
+
+C:\Users\Mendel\Desktop\DojoAssignments\iOS>copy NUL about.txt
+Overwrite about.txt? (Yes/No/All): n
+        0 file(s) copied.
+
+C:\Users\Mendel\Desktop\DojoAssignments\iOS>cd ..
+
+C:\Users\Mendel\Desktop\DojoAssignments>cd netcore
+
+C:\Users\Mendel\Desktop\DojoAssignments\netCore>copy NUL about.txt
+        1 file(s) copied.
+
+C:\Users\Mendel\Desktop\DojoAssignments\netCore>cd ..
+
+C:\Users\Mendel\Desktop\DojoAssignments>cd webfundamentals
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals>md Git HTML CSS Javascript
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals>cd git
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\Git>copy NUL about.txt
+        1 file(s) copied.
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\Git>cd ..
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals>cd html
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\HTML>copy NUL about.txt
+        1 file(s) copied.
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\HTML>cd ..
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals>cd css
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\CSS>copy NUL about.txt
+        1 file(s) copied.
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\CSS>cd ..
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals>cd javascript
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\Javascript>copy NUL about.txt
+        1 file(s) copied.
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\Javascript>cd ..
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals>cd html
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\HTML>copy NUL Indentation.html
+        1 file(s) copied.
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\HTML>cd ..
+
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals>cd ..
+
+C:\Users\Mendel\Desktop\DojoAssignments>dir /b /s
+C:\Users\Mendel\Desktop\DojoAssignments\iOS
+C:\Users\Mendel\Desktop\DojoAssignments\MEAN
+C:\Users\Mendel\Desktop\DojoAssignments\netCore
+C:\Users\Mendel\Desktop\DojoAssignments\Python
+C:\Users\Mendel\Desktop\DojoAssignments\Ruby
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals
+C:\Users\Mendel\Desktop\DojoAssignments\iOS\about.txt
+C:\Users\Mendel\Desktop\DojoAssignments\MEAN\about.txt
+C:\Users\Mendel\Desktop\DojoAssignments\netCore\about.txt
+C:\Users\Mendel\Desktop\DojoAssignments\Python\about.txt
+C:\Users\Mendel\Desktop\DojoAssignments\Ruby\about.txt
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\about.txt
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\CSS
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\Git
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\HTML
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\Javascript
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\CSS\about.txt
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\Git\about.txt
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\HTML\about.txt
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\HTML\Indentation.html
+C:\Users\Mendel\Desktop\DojoAssignments\WebFundamentals\Javascript\about.txt
+
+C:\Users\Mendel\Desktop\DojoAssignments>

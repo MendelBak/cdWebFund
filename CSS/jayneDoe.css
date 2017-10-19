@@ -1,0 +1,103 @@
+*{
+    font-family: 'Amatic SC', cursive;
+}
+
+#wrapper{
+    width: 1000px;
+    height: 950px;
+    background: linear-gradient(#775353, #6D2222, grey);
+    margin: 0 auto;
+}
+
+#header{
+    /* display: inline-block;  Commenting out, otherwise header slides to left browser wall. */
+    background: linear-gradient(#666666, silver);
+    width: 1000px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+#header h1{
+    display: inline-block;
+    margin: 5px 0 0 20px;
+    width: 200px;
+}
+
+#header h2{
+    margin: 10px 20px 0 0;
+    float: right;
+}
+
+#photo_of_me{
+    display: inline-block;
+    margin: 25px 25px 0 25px;
+    border: 4px solid silver;
+}
+
+#aboutBox{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#aboutHeader{
+    vertical-align: top;
+    height: 40px;
+    width: 400px;
+    color: black;
+    background: linear-gradient(#666666, #918F8F, #666666);
+    line-height: 35px;
+    margin: 25px 0 0 0;
+    padding-left: 10px;
+}
+
+.aboutText{
+    vertical-align: top;
+    width: 400px;
+    height: 115px;
+    color: black;
+    background: linear-gradient(to right, #EBE9E9, silver, grey);
+    margin: 0 0 0 0; 
+    padding-left: 10px;
+}
+
+.greyBox {
+    display: inline-block;
+    vertical-align: top;  
+    width: 300px;
+    height: 500px;  
+    background: linear-gradient(to right, #EBE9E9, silver, grey);
+    position: relative;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+    
+    
+.greyBox h2{
+    display: inline-block;
+    width: 300px;
+    height: 40px;
+    background: linear-gradient(#666666, #918F8F, #666666);
+    margin: 0;
+}
+
+.greyBox p{
+    /* position: static; */
+    margin-left: 10px;
+    margin-top: 5px;
+    /* margin-bottom: 0;  if I uncomment those two properties it will work but will throw off the "LA Mode" a little tiny bit.*/
+}
+
+.greyBoxImg{
+    margin:-20px 0 0 0;
+}
+
+.techBox{
+    width:300px;
+    height:165px;
+}
+
+.techBox h2{
+    width: 300px;
+    height: 40px;
+    background: linear-gradient(#666666, #918F8F, #666666);
+}
