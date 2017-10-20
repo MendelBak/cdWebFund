@@ -1,0 +1,224 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#wrapper{
+    width: 970px;
+    height: 600px;
+    margin: 25px auto 0 auto;
+    background-color: #245176;
+    color: white;
+}
+
+#header img{
+    width: 300px;
+    margin: 30px;
+}
+
+#header-right a{
+    color: #9f951d;
+}
+
+#header span{
+    color: black;
+}
+
+#header-right p{
+    display: inline-block;
+
+}
+#header-right {
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px 10px 10px 270px;
+    text-align: center;
+}
+
+
+#search{
+    width: 300px;
+    height: 50px;
+    background-color: #444444;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px black;
+    margin-top: 5px;
+    padding: 15px 7px 4px 10px;
+
+}
+#search input{
+    text-align: center;
+    padding: 10px;
+    border: 2px solid silver;
+    box-shadow: 2px 2px 2px 0;
+    margin: 0 0 0 13px;
+}
+
+#search button{
+    background-color: #245076;
+    color: white;
+    border-radius: 5px;
+    width: 40px;
+    height: 30px;
+    box-shadow: 1px 1px black;
+
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 860px;
+    height: 50px;
+    background-color: #487ead;
+    border-radius: 8px;
+    margin-left: 75px;
+}
+
+#navbar h3{
+    margin-top: 14px;
+    font-weight: lighter;
+}
+
+#main-content-left{
+    display: inline-block;
+    position: relative;
+    bottom: 100px;
+}
+
+#main-content-left ul{
+    display: inline-block;
+}
+
+#main-content-left ul li{
+    list-style-type: none;
+    margin: 10px 0 0px 100px;
+    text-align: center;
+}
+
+#main-content-left a{
+    color: white;
+}
+#main-content-left span{
+    color: #9f951d;
+    font-weight: bold;
+}
+
+#main-content-right{
+    position: relative;
+    left: 100px;
+    display: inline-block;
+    height: 120px;
+    width: 550px;
+    background-color: #245176;
+    margin: 25px 0px 0px 0px;
+}
+
+#main-content-right p{
+    display: inline-block;
+    font-size: 14px;
+}
+
+#main-content-right h3{
+    display: inline-block;
+    font-family: 'IM Fell Double Pica', serif;
+    color: #fbd22f;
+    text-align: center;
+    margin: 15px 0 0 80px;
+    font-size: 25px;
+    font-weight: lighter;
+    width: 350px;   
+}
+
+#main-content-right h3:last-child{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#middle-content{
+    height: 250px;
+    width: 970px;
+    background-color: white; /* Dont forget to change this backgroud-color back to white. */
+    color: black;
+}
+
+#middle-content-left{
+    display: inline-block;
+    width: 350px;
+    margin: 25px 0px 0px 100px;
+    text-align: center;
+}
+
+#middle-content-left hr{
+    background-color: #7cacd7;
+    height: 5px;
+    width: 385px;
+}
+
+#middle-content-left a{
+    color: #7cacd7;
+}
+
+#middle-content-left ul li{
+    margin-left: 40px;
+}
+
+#middle-content-left p{
+    margin-left: 40px;
+}
+#middle-content-left h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 40px;
+}
+
+#middle-content-right{
+    display:inline-block;
+    vertical-align: top;
+    width: 350px;
+    text-align: center;
+    margin: 25px 0 0 75px;
+
+}
+
+#middle-content-right hr{
+    background-color: #7cacd7;
+    height: 5px;
+    width: 420px;
+}
+
+#middle-content-right a{
+    color: #7cacd7;
+}
+
+#middle-content-right h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#footer{
+    height: 120px;
+    background-color: #123f66; 
+    margin-bottom: 25px;
+}
+
+#footer h3{
+    display: inline-block;
+    color: #7cacd7;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 50px 0 0 25px;
+    font-weight: lighter;
+}
+
+#footer h3:nth-child(1){
+    margin-left: 200px;
+}
+
+#footer p{
+    color: #7cacd7;
+    font-size: 10px;
+    margin: 25px 0 0 450px;
+}
