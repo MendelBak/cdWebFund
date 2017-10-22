@@ -10,9 +10,9 @@ var str3 = "Goodbye";
 var bool1 = true;
 var bool2 = false;
 
-var undefined1 = ;
+var undefined1 = undefined;
 
-console.log(num1, num2, num3);
-console.log(str1, str2, str3);
-console.log(bool1, bool2);
-console.log(underfined1);
+console.log("List of ints:", num1, num2, num3, num4);
+console.log("List of strs:", str1, str2, str3);
+console.log("List of booleans:", bool1, bool2);
+console.log("Undefined:", underfined1);
