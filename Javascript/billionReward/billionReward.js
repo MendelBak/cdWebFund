@@ -23,4 +23,5 @@ var infiniteMoney = 0.01;
 
     for (var i = 1; i < 1000E+2; i++) {
         infiniteMoney *= 2; }
+        console.log("Days until infinity days:", i);
         console.log("$" + infiniteMoney)
