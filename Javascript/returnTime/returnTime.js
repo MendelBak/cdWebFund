@@ -1,6 +1,6 @@
 var hour = 8;
-var minutes = 59;
-var period = "PM";
+var minutes = 19;
+var period = "AM";
 var name = "Jasper";
 var myName = "Dantes";
 var timeOfDay = "";
@@ -26,4 +26,4 @@ if (timeOfHour === "just after") {
 }
 
 
-console.log("Hello", name, "It's me,", myName, "!", "Good", timeOfDay, "!", "It's currently", hour, ":", minutes, period, ",", "which is", timeOfHour, relevantHour, period);
+console.log("Hello " + name, "It's me, " + myName + "!", "Good " + timeOfDay + "!", "It's currently " + hour + ":" + minutes + period + ",", "which is", timeOfHour, relevantHour + period);
