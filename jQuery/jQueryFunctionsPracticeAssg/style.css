@@ -1,0 +1,42 @@
+#attrMethod {
+    color: purple;
+}
+
+h4 {
+    background-color: rgb(216, 16, 16);
+    color: black;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    width: 100px;
+    height: 75px;;
+    color: silver;
+    align-items: center;
+    margin-left: 25px;
+    margin-top: 25px;
+
+}
+
+button {
+    display: block;
+    margin-left: 25px;
+    margin-top: 25px;
+    background-color: rgb(58, 58, 204);
+    color: silver;
+    padding: 3px;
+    border-radius: 7px;
+    box-shadow: 3px 3px 3px;
+    border-color: black;
+    border-width: 1px;
+}
+
+.addClassTest{
+    display: inline-block;
+    background-color: purple;
+    color: green;
+}
+
+#valueMethod{
+    background-color: black;
+    color: yellow;
+}
