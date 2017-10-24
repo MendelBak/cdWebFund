@@ -1,0 +1,13 @@
+img{
+    width: 300px;
+    margin: 15px;
+}
+
+button{
+    background-color: rgb(49, 131, 49);
+    border-radius: 5px;
+    width: 100px;
+    height: 39px;
+    align-items: center;
+    margin-left: 615px;
+}
