@@ -58,7 +58,7 @@ $("#prependMethod").click(function(){
 
 $("#attrMethod").click(function() {
     $("#attrMethod").attr("");
-    console.log($("#attrMethod").attr("id"));
+    console.log($("#attrMethod").attr("id" ));
 });
 
 $("#valueMethod").click(function() {
