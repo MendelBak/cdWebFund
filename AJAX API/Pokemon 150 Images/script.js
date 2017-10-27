@@ -13,11 +13,4 @@ $(document).ready(function () {
                 }
             }, "json");
     });
-
-
-
-
-
-
-
 });//(document).ready end tag

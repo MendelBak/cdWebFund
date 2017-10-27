@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper{
+    width: 1700px;
+    height: 1100px;
+    background-color: #B96E2F;
+    margin: 25px auto;
+}
+
+#poke{
+    display: inline-block;
+    width: 1450px;
+    height: 1100px;
+    background-color: #942664;
+}
+
+#sidebar{
+    vertical-align: top;
+    display: inline-block;
+    width: 200px;
+    height: 500px;
+    background-color: white;
+    border: 10px solid #269426;
+}
+
+#sidebar h1{
+    text-align: center;
+    margin-top: 15px;
+}
+
+#sidebar div{
+    height: 96px;
+    width: 96px;
+    background-color: orange;
+    margin: 5px auto;
+}
