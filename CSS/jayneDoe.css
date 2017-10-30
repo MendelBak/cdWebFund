@@ -70,14 +70,9 @@
     margin-top: 25px;
     margin-left: 25px;
 }
-    
-    
+
 .greyBox h2{
-    display: inline-block;
-    width: 300px;
-    height: 40px;
-    background: linear-gradient(#666666, #918F8F, #666666);
-    margin: 0;
+    margin: 0px;
 }
 
 .greyBox p{
@@ -91,13 +86,27 @@
     margin:-20px 0 0 0;
 }
 
-.techBox{
-    width:300px;
-    height:165px;
-}
-
 .techBox h2{
     width: 300px;
-    height: 40px;
+    height: 20px;
     background: linear-gradient(#666666, #918F8F, #666666);
+
+}
+
+.techIcons{
+    display: inline-block;
+    margin: 0 6px 0 6px;
+    width: 40px;
+    height: 40px;
+}
+
+.techIcons img{
+    width: 40px;
+    height: 40px;
+    padding: 6px 0 0 0;
+}
+
+.greyBox ul{
+    margin: 0px ;
+    padding: 0 0 0 10px;
 }
