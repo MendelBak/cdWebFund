@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="scratch2.js"></script>
+    <title>Scratch 2</title>
+</head>
+
+<script>
+    $(document).ready(function () {
+            $('button').click(function(){
+                alert("Yes");
+                $(this).siblings().children().children().text("Michael choi suckz");
+            });
+            // $(this).siblings('p').hide();
+            // $(this).parent().append('<h2> HOWDY TREY!</h2>');
+            // $('#myDiv').children().css('background-color', 'firebrick');
+            // $('#myDiv').children('h3').css('background-color', 'green');
+        
+    });
+</script>
+
+<body>
+    <div id="myDiv">
+        <button id="btn">Clicke me for a wild time!</button>
+        <ul>
+            <li><h3>Michael Choi</h3></li>
+            <li><h3>Trey Villfane</h3></li>
+            <li><h3>Vanessa Burroughs</h3></li>
+            <li><h3>Mendel bakalenyik</h3></li>
+        </ul>
+    </div>
+</body>
+
+<!-- <script>
+
+          function attach_h3_handlers(){
+              $('h3').click(function(){
+                  alert('You clicked an h3!')
+              })
+          }
+          $(document).ready(function(){
+                attach_h3_handlers();
+                $('button').click(function(){
+                    $('div').append('<h3> This is     dynamic content </h3>');
+                    attach_h3_handlers();
+                });
+            });
+      </script>
+      <body>
+          <div>
+              <h3>Click me!</h3>
+              <button>Click me!2</button>
+          </div>
+      </body> -->
+
+</html>
