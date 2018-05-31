@@ -1,0 +1,33 @@
+body{
+    background-color: firebrick;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+#wrapper{
+    margin: 200px auto;
+    display: none;
+}
+div.row div{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+div.brick{
+    background-color: blue;
+}
+div.coin{
+    background: url("star.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+div.pacman{
+    background: url("pacman.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#startGame{
+    margin: 250px auto;
+}
