@@ -2,32 +2,49 @@ body{
     background-color: firebrick;
     margin: 0px;
     padding: 0px;
-    text-align: center;
+    /* text-align: center; */
 }
 #wrapper{
-    margin: 200px auto;
-    display: none;
+     margin: 0px; 
+     display: none; 
 }
 div.row div{
     width: 20px;
     height: 20px;
+    /* margin-bottom: -5px; */
     display: inline-block;
 }
 div.brick{
     background-color: blue;
+    width: 20px;
+    height: 20px;
 }
 div.coin{
     background: url("star.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    width: 20px;
+    height: 20px;
 }
-div.pacman{
+div#pacman{
     background: url("pacman.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position: absolute;
+    width: 20px;
+    height: 20px;
 }
+#pacman{
+    display: none;
+    transform: rotate(0deg);
+ }
 #startGame{
     margin: 250px auto;
+}
+#score{
+    border: 0.1px solid black;
+    width: 100px;
+    height: 20px;
 }
