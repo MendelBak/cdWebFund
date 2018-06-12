@@ -35,7 +35,7 @@ function showWorld() {
     var output = "";
 
     for (var i = 0; i < world.length; i++) {
-        output += "\n<div class='row'>\n`";
+        output += "\n<div class='row'>\n";
         for (var j = 0; j < world[i].length; j++) {
             if (world[i][j] === 0) {
                 output += "<div class='brick'></div>";

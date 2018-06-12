@@ -1,0 +1,185 @@
+<html>
+
+<head>
+	<title>1942 Game</title>
+
+	<style type="text/css">
+		body {
+			background-color: black;
+		}
+
+		#container {
+			background: url('background.jpg');
+			width: 1000px;
+			height: 550px;
+		}
+
+		#hero {
+			background: url('1942.gif');
+			background-position: -85px -180px;
+			width: 28px;
+			height: 28px;
+			position: absolute;
+		}
+
+		.enemy1 {
+			background: url('1942.gif');
+			background-position: -150px 0px;
+			width: 28px;
+			height: 28px;
+			position: absolute;
+		}
+
+		.bullet {
+			background: url('1942.gif');
+			background-position: -185px -400px;
+			width: 18px;
+			height: 18px;
+			position: absolute;
+		}
+
+		#score {
+			position: absolute;
+			border: 10px solid red;
+			top: 20px;
+			left: 800px;
+			background-color: white;
+			padding: 10px;
+			font-size: 30px;
+			font-family: Arial;
+		}
+	</style>
+</head>
+
+<body>
+	<div id='container'>
+		<div id='hero' style='top:300px; left:300px;'></div>
+		<div id='enemies'>
+		</div>
+		<div id='bullets'>
+			<div class='bullet' style='top:150px; left:200px;'></div>
+			<div class='bullet' style='top:250px; left:200px;'></div>
+			<div class='bullet' style='top:350px; left:200px;'></div>
+			<div class='bullet' style='top:450px; left:200px;'></div>
+		</div>
+	</div>
+
+	<div id='score'>100</div>
+
+
+	<script>
+		var hero = {
+			x: 500,
+			y: 500
+		}
+
+		var enemies = [{ x: 100, y:100}, { x: 200, y:100}, { x: 300, y:100}, { x: 400, y:100}, { x: 500, y:100}, { x: 600, y:100}, { x: 700, y:100}];
+
+		var bullets = [];
+
+		function showHero() {
+			document.getElementById("hero").style['left'] = hero.x + "px";
+			document.getElementById("hero").style["top"] = hero.y + "px";
+		}
+
+		function showEnemies() {
+			var output = "";
+			for (var i = 0; i < enemies.length; i++) {
+				output += "<div class='enemy1' style='top:" + enemies[i].y + "px; left:" + enemies[i].x + "px;'></div>\n";
+			}
+			document.getElementById("enemies").innerHTML = output;
+		}
+
+
+		// Moves the enemies down. Resets them when they pass the end of the background image.
+		function moveEnemies(){
+				for(var i = 0; i < enemies.length; i++) {
+					if(enemies[i].y >= 530) {
+						enemies[i].x = (Math.random() * 900 ) + 100;
+						enemies[i].y = -20;
+					} else {
+						setInterval(1000);
+						enemies[i].y += 0.5;
+					}
+				}
+		}
+
+		function fireBullet() {
+			var output = "";
+			for (var i = 0; i < bullets.length; i++) {
+				output += "<div class='bullet' style='top:" + bullets[i].y + "px; left:" + bullets[i].x + "px;'></div>\n";
+			}
+			document.getElementById("bullets").innerHTML = output;
+			for(var j = 0; j < bullets.length; j++) {
+				if(bullets[j].y < -20) {
+					bullets.splice(j, 1);
+				} else {
+					bullets[j].y -= 1;
+				}
+			}
+		}
+
+		function runGame() {
+			showHero();
+			moveEnemies();
+			showEnemies();
+			fireBullet();
+		}
+
+		// Makes the enemies move
+		setInterval(runGame, 10)
+		
+
+		// Function that moves the hero based on user keystrokes.
+		document.onkeydown = function (e) {
+			console.log(e);
+			// Movement
+			if (e.keyCode === 37) {
+				console.log("Left key was pressed");
+				if (hero.x >= 20) {
+					hero.x -= 10;
+				} else {
+					console.log("You cannot fly off screen.");
+				}
+			}
+			else if (e.keyCode === 38) {
+				console.log("Up key was pressed");
+				if (hero.y >= 20) {
+					hero.y -= 10;
+				} else {
+					console.log("You cannot fly off screen.");
+				}
+			}
+			else if (e.keyCode === 39) {
+				console.log("Right key was pressed");
+				if (hero.x <= 970) {
+					hero.x += 10;
+				} else {
+					console.log("You cannot fly off screen.");
+				}
+			}
+			else if (e.keyCode === 40) {
+				console.log("Down key was pressed");
+				if (hero.y <= 520) {
+					hero.y += 10;
+				} else {
+					console.log("You cannot fly off screen.");
+				}
+			}
+
+			// Shoot bullets
+			if(e.keyCode === 32) {
+				console.log("Spacebar was pressed. Fire!");
+				bullets.push({x: hero.x, y: hero.y - 2});
+			}
+		}
+
+		// Function call that runs the game
+		runGame();
+
+
+	</script>
+
+</body>
+
+</html>
