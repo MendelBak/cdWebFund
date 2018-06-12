@@ -9,7 +9,8 @@
 		}
 
 		#container {
-			background: url('background.jpg');
+			background: url('spacewar.jpg');
+			background-size: cover;
 			width: 1000px;
 			height: 550px;
 		}
@@ -25,6 +26,14 @@
 		.enemy1 {
 			background: url('1942.gif');
 			background-position: -150px 0px;
+			width: 28px;
+			height: 28px;
+			position: absolute;
+		}
+
+		.enemy2 {
+			background: url('1942.gif');
+			background-position: -85px 220px;
 			width: 28px;
 			height: 28px;
 			position: absolute;
@@ -53,18 +62,14 @@
 
 <body>
 	<div id='container'>
-		<div id='hero' style='top:300px; left:300px;'></div>
 		<div id='enemies'>
 		</div>
+		<div id="hero"></div>
 		<div id='bullets'>
-			<div class='bullet' style='top:150px; left:200px;'></div>
-			<div class='bullet' style='top:250px; left:200px;'></div>
-			<div class='bullet' style='top:350px; left:200px;'></div>
-			<div class='bullet' style='top:450px; left:200px;'></div>
 		</div>
 	</div>
 
-	<div id='score'>100</div>
+	<div id='score'>0</div>
 
 
 	<script>
@@ -73,9 +78,11 @@
 			y: 500
 		}
 
-		var enemies = [{ x: 100, y:100}, { x: 200, y:100}, { x: 300, y:100}, { x: 400, y:100}, { x: 500, y:100}, { x: 600, y:100}, { x: 700, y:100}];
+		var enemies = [{ x: 100, y: -10 }, { x: 200, y: -120 }, { x: 300, y: -250 }, { x: 400, y: -10 }, { x: 500, y: -10 }, { x: 600, y: -230 }, { x: 700, y: -10 }];
 
 		var bullets = [];
+
+		var score = 0;
 
 		function showHero() {
 			document.getElementById("hero").style['left'] = hero.x + "px";
@@ -85,23 +92,30 @@
 		function showEnemies() {
 			var output = "";
 			for (var i = 0; i < enemies.length; i++) {
-				output += "<div class='enemy1' style='top:" + enemies[i].y + "px; left:" + enemies[i].x + "px;'></div>\n";
+				// output += "<div class='enemy1' style='top:" + enemies[i].y + "px; left:" + enemies[i].x + "px;'></div>\n";
+				// Other plane type
+				output += "<div class='enemy2' style='top:" + enemies[i].y + "px; left:" + enemies[i].x + "px;'></div>\n";
 			}
 			document.getElementById("enemies").innerHTML = output;
 		}
 
 
 		// Moves the enemies down. Resets them when they pass the end of the background image.
-		function moveEnemies(){
-				for(var i = 0; i < enemies.length; i++) {
-					if(enemies[i].y >= 530) {
-						enemies[i].x = (Math.random() * 900 ) + 100;
-						enemies[i].y = -20;
-					} else {
-						setInterval(1000);
-						enemies[i].y += 0.5;
-					}
+		function moveEnemies() {
+			// If all enemies were shot down, resurrect them.
+			if (enemies.length <= 0) {
+				enemies = [{ x: 100, y: -10 }, { x: 200, y: -220 }, { x: 300, y: -50 }, { x: 400, y: -310 }, { x: 500, y: -10 }, { x: 600, y: -350 }, { x: 700, y: -110 }];
+			}
+
+			for (var i = 0; i < enemies.length; i++) {
+				if (enemies[i].y >= 530) {
+					enemies[i].x = (Math.random() * 900) + 100;
+					enemies[i].y = -20;
+				} else {
+					setInterval(1000);
+					enemies[i].y += 1;
 				}
+			}
 		}
 
 		function fireBullet() {
@@ -110,29 +124,58 @@
 				output += "<div class='bullet' style='top:" + bullets[i].y + "px; left:" + bullets[i].x + "px;'></div>\n";
 			}
 			document.getElementById("bullets").innerHTML = output;
-			for(var j = 0; j < bullets.length; j++) {
-				if(bullets[j].y < -20) {
+		}
+
+		// This function also does collision detection between bullets and enemies
+		function moveBullet() {
+			// Move bullet
+			for (var j = 0; j < bullets.length; j++) {
+				if (bullets[j].y < -10) {
 					bullets.splice(j, 1);
-				} else {
-					bullets[j].y -= 1;
+				}
+				else {
+					bullets[j].y -= 5;
+				}
+
+
+			}
+		}
+
+		function collisionDetection() {
+			// Collision detection between enemies <> hero
+			for (var k = 0; k < enemies.length; k++) {
+				for (var j = 0; j < bullets.length; j++) {
+					if (Math.abs(enemies[k].x - bullets[j].x) < 15 && Math.abs(enemies[k].y - bullets[j].y) < 10) {
+						enemies.splice(k, 1);
+						console.log("An enemy plane was shot down!");
+						score += 10;
+						document.getElementById("score").innerHTML = score;
+					}
+				}
+				if (Math.abs(enemies[k].x - hero.x) < 10 && Math.abs(enemies[k].y - hero.y) < 10) {
+					console.log("You crashed into another plane and lost  points...");
+					score -= 5;
+					document.getElementById("score").innerHTML = score;
 				}
 			}
 		}
 
+
 		function runGame() {
 			showHero();
-			moveEnemies();
 			showEnemies();
+			moveEnemies();
 			fireBullet();
+			moveBullet();
+			collisionDetection();
 		}
 
 		// Makes the enemies move
 		setInterval(runGame, 10)
-		
+
 
 		// Function that moves the hero based on user keystrokes.
 		document.onkeydown = function (e) {
-			console.log(e);
 			// Movement
 			if (e.keyCode === 37) {
 				console.log("Left key was pressed");
@@ -168,9 +211,9 @@
 			}
 
 			// Shoot bullets
-			if(e.keyCode === 32) {
+			if (e.keyCode === 32) {
 				console.log("Spacebar was pressed. Fire!");
-				bullets.push({x: hero.x, y: hero.y - 2});
+				bullets.push({ x: hero.x, y: hero.y - 2 });
 			}
 		}
 
